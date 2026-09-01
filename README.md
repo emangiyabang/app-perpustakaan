@@ -1,58 +1,35 @@
 # App Perpustakaan
 
-Aplikasi web sistem manajemen perpustakaan yang dibangun menggunakan framework **Laravel 12** untuk keperluan praktikum mata kuliah Web Programming Framework (WPF).
+Aplikasi manajemen perpustakaan berbasis **Laravel 12** untuk praktikum Web Programming Framework (WPF). Aplikasi ini bertujuan untuk mengelola data buku, anggota, dan transaksi peminjaman perpustakaan secara digital dan efisien.
 
-## Tujuan Aplikasi
+---
 
-Aplikasi ini bertujuan untuk memudahkan pengelolaan operasional perpustakaan secara digital, meliputi manajemen katalog buku, data anggota, serta pencatatan transaksi peminjaman dan pengembalian buku secara terstruktur, efisien, dan aman.
+## Cara Menjalankan Project
 
-## Cara Menjalankan Project Secara Lokal
-
-Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal:
-
-### 1. Clone Repository
-
+```bash
+# 1. Clone repository & masuk folder
 git clone https://github.com/emangiyabang/app-perpustakaan.git
 cd app-perpustakaan
 
-### 2. Install Dependensi PHP (Composer)
-
+# 2. Install dependensi
 composer install
 
-### 3. Konfigurasi Environment (`.env`)
-
-Salin file `.env.example` menjadi `.env`:
+# 3. Setup environment (.env) & App Key
 cp .env.example .env
-
-Pastikan pengaturan database di file `.env` sudah sesuai:
-env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=db_perpustakaan
-DB_USERNAME=root
-DB_PASSWORD=
-
-### 4. Generate Application Key
-
 php artisan key:generate
 
-### 5. Buat & Migrasi Database
-
-Pastikan MySQL di XAMPP sudah menyala, lalu jalankan:
-
+# 4. Migrasi database (pastikan MySQL XAMPP sudah aktif)
 php artisan migrate
 
-### 6. Jalankan Local Server
-
+# 5. Jalankan server lokal
 php artisan serve
+```
+Akses aplikasi melalui browser di: `http://127.0.0.1:8000`
 
-Akses aplikasi melalui browser di: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+---
 
-## Pemahaman Konsep MVC (Model - View - Controller)
+## Perbedaan Model, View, dan Controller (MVC)
 
-Arsitektur **MVC** memisahkan komponen aplikasi menjadi tiga peran utama:
-
-1. **Model**: Bertanggung jawab mengelola struktur data, aturan logika bisnis, serta interaksi langsung dengan database (misal: query data buku, simpan transaksi).
-2. **View**: Bertanggung jawab menyajikan tampilan antarmuka (UI) kepada pengguna (file template Blade/HTML, CSS, JS).
-3. **Controller**: Bertindak sebagai penghubung/jembatan antara Model dan View. Controller menerima request dari pengguna, memanggil Model untuk memproses data yang dibutuhkan, lalu mengembalikan hasilnya ke View untuk ditampilkan.
+- **Model**: Mengelola data, logika bisnis, dan interaksi langsung dengan database.
+- **View**: Menampilkan antarmuka pengguna (UI) yang dilihat dan berinteraksi langsung dengan user.
+- **Controller**: Menjadi jembatan yang menerima request dari user, memproses data melalui Model, dan mengirimkan hasilnya ke View.
