@@ -18,6 +18,10 @@
         .btn { display: inline-block; padding: 6px 14px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; }
         form.inline { display: inline; }
         footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
+        form:not(.inline) { max-width: 500px; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input[type="text"], input[type="number"], input[type="email"], select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
+        .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
     </style>
 </head>
 <body>
