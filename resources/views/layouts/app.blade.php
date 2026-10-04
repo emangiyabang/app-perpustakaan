@@ -22,6 +22,13 @@
         label { display: block; margin-top: 12px; font-weight: bold; }
         input[type="text"], input[type="number"], input[type="email"], select, textarea { width: 100%; padding: 6px; margin-top: 4px; }
         .error { color: #b91c1c; font-size: 14px; margin-top: 4px; }
+        /* Badge status peminjaman */
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 13px; font-weight: bold; }
+        .badge-success { background: #d1fae5; color: #065f46; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-danger  { background: #fee2e2; color: #991b1b; }
+        /* Tombol kembalikan */
+        .btn-kembalikan { padding: 4px 10px; background: #16a34a; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
     </style>
 </head>
 <body>
